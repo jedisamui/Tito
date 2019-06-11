@@ -1,7 +1,7 @@
 <?php
 $servername = getenv('TITODBSERVER');
-$password = "Tito2016";
-$username = "root";
+$password = getenv('TITODBPASSWORD');
+$username = getenv('TITODBUSERNAME');
 $tablename = "TitoTable";
 $dbname = "TitoDB";
 

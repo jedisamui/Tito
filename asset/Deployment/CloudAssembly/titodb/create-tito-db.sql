@@ -7,3 +7,9 @@ CREATE TABLE TitoTable (id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	work VARCHAR(50) NOT NULL, 
 	hour_home_departure VARCHAR(50) NOT NULL, 
 	hour_work_departure VARCHAR(50) NOT NULL);
+
+GRANT ALL PRIVILEGES ON TitoDB.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+SET GLOBAL max_connect_errors=100000;
+SET GLOBAL max_connections = 400;
