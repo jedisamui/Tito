@@ -128,7 +128,7 @@ lifecycleTasks:
       cd $HTMLPATH\ngit clone $GITREPO .\ngit checkout tags/$CodeVersion\n\necho\n\
       echo -e \"conf httpd.conf pour prise en compte de PHP et paramètrage du serveur\
       \ SQL\\n\"\n\n\necho \"LoadModule php5_module modules/libphp5.so\" >> $HTTPDCONF\n\
-      cat <<EOF >> $HTTPDCONF\n<IfModule env_module>\n    SetEnv TITO-SQL \"$SQLSERVER\"\
+      cat <<EOF >> $HTTPDCONF\n<IfModule env_module>\n    SetEnv TITODBSERVER \"$SQLSERVER\"\
       \n</IfModule>\nEOF\n\necho -e \"conf php.ini pour Timezone \\n\"\n\necho \"\
       date.timezone = \\\"Europe/Paris\\\"\" >> /etc/php.ini\n\n"
     isRebootAfter: false

@@ -1,6 +1,6 @@
 #Created by Vincent Meoc
 # Create the Tito Front End container
-#Env (optional): TITOSQL=<FQDN/IP of MYSQL
+#Env (optional): TITODBSERVER=<FQDN/IP of MYSQL
 
 FROM php:rc-apache
 #COPY . /var/www/html/
@@ -16,7 +16,7 @@ RUN docker-php-ext-install mysqli pdo pdo_mysql sockets
 RUN git clone https://github.com/vmeoc/Tito /var/www/html/
 
 RUN echo "<IfModule env_module>" >> /etc/apache2/mods-enabled/env.conf
-RUN echo "     SetEnv TITO-SQL \"Tito-SQL\"" >> /etc/apache2/mods-enabled/env.conf
+RUN echo "     SetEnv TITODBSERVER \"TITODBSERVER\"" >> /etc/apache2/mods-enabled/env.conf
 RUN echo "</IfModule>" >> /etc/apache2/mods-enabled/env.conf
 
 ENTRYPOINT ["/usr/local/bin/apache2-foreground"]

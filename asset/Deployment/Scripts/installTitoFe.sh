@@ -50,7 +50,7 @@ echo -e "conf httpd.conf pour prise en compte de PHP et paramètrage du serveur 
 echo "LoadModule php5_module modules/libphp5.so" >> $HTTPDCONF
 cat <<EOF >> $HTTPDCONF
 <IfModule env_module>
-    SetEnv TITO-SQL "$SQLSERVER"
+    SetEnv TITODBSERVER "$SQLSERVER"
 </IfModule>
 EOF
 

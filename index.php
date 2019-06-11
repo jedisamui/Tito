@@ -214,7 +214,7 @@ $(document).ready(function () {
                         echo "<br>";
                         echo "Tito Front End: " . gethostname() . " (" . getHostByName(getHostName()) .")";
                         echo "<br>";
-                        echo "Tito Back End: " . getenv('TITO-SQL');
+                        echo "Tito Back End: " . getenv('TITODBSERVER');
                         echo "<br>";
                         echo "<a href=\"db_dump.php\">db_dump";
 

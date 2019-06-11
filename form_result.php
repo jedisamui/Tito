@@ -9,7 +9,7 @@ include 'getTrafficData.php';
 
 
 //**************SQL variables*********************
-$servername = getenv('TITO-SQL');
+$servername = getenv('TITODBSERVER');
 $username = "root";
 $password = "Tito2016";
 $tablename = "TitoTable";

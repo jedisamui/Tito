@@ -19,7 +19,7 @@ if [ -n "$TITO_SQL_SERVICE_SERVICE_HOST" ]; then
     if [ -n "$PROXY_NAME" ]; then
      cat <<EOF >> /etc/apache2/mods-enabled/env.conf
                     <IfModule env_module>
-                            SetEnv TITO-SQL $TITO_SQL_SERVICE_SERVICE_HOST
+                            SetEnv TITODBSERVER $TITO_SQL_SERVICE_SERVICE_HOST
                             SetEnv proxy_name $PROXY_NAME
                             setEnv proxy_port $PROXY_PORT
                     </IfModule>
@@ -28,7 +28,7 @@ EOF
     else
         cat <<EOF >> /etc/apache2/mods-enabled/env.conf
                        <IfModule env_module>
-                               SetEnv TITO-SQL $TITO_SQL_SERVICE_SERVICE_HOST
+                               SetEnv TITODBSERVER $TITO_SQL_SERVICE_SERVICE_HOST
                        </IfModule>
 EOF
 fi
