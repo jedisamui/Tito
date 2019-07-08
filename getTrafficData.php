@@ -1,7 +1,7 @@
 <?php
 
-const GOOGLE_API_KEY = "AIzaSyA5ZDRG9r8hBWrtlGsEuJKU2KBg_cCV_Qk";
-
+//const GOOGLE_API_KEY = "AIzaSyA5ZDRG9r8hBWrtlGsEuJKU2KBg_cCV_Qk";
+const GOOGLE_API_KEY = "AIzaSyDjqZiRAmkMv0Qjd6nwoUBwQnoX1S6BV1o"
 $metric_name = "google_maps_call_duration";
 $tag_name = "TitoTier";
 $tag_value = "TitoFE";
