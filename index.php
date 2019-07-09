@@ -1,4 +1,10 @@
+
 <!DOCTYPE html>
+
+<?php
+$mapsurl = "https://maps.googleapis.com/maps/api/js?key=".getenv('MAPSKEY')."&libraries=places&callback=initAutocomplete";
+?>
+
 <html lang="en">
 
     <head>
@@ -396,7 +402,7 @@ $(document).ready(function () {
             }
         </script>
 
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5ZDRG9r8hBWrtlGsEuJKU2KBg_cCV_Qk&libraries=places&callback=initAutocomplete" async defer></script>
+        <script src="<?php echo $mapsurl ?>" async defer></script>
 
     </body>
 

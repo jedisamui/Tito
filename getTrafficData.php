@@ -1,6 +1,6 @@
 <?php
 
-const GOOGLE_API_KEY = "AIzaSyA5ZDRG9r8hBWrtlGsEuJKU2KBg_cCV_Qk";
+$mapskey = getenv('MAPSKEY');
 $metric_name = "google_maps_call_duration";
 $tag_name = "TitoTier";
 $tag_value = "TitoFE";
@@ -128,7 +128,7 @@ global $metric_name;
 global $tag_name;
 global $tag_value;
 
-    $url = "https://maps.googleapis.com/maps/api/directions/json?origin=" . str_replace(' ', '%20', $origin) . "&destination=" . str_replace(' ', '%20', $dest) . "&departure_time=" . $time . "&traffic_model=pessimistic&key=" . GOOGLE_API_KEY;
+    $url = "https://maps.googleapis.com/maps/api/directions/json?origin=" . str_replace(' ', '%20', $origin) . "&destination=" . str_replace(' ', '%20', $dest) . "&departure_time=" . $time . "&traffic_model=pessimistic&key=" . getenv('MAPSKEY');
 
 #to monitor the google maps call duration_in_traffic
     $time1=microtime(true);
